@@ -1,4 +1,9 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Intro](README.md)
+* [API Reference](api-reference.md)
+
+## Resources
+
+* [Users](resources/users.md)
 
