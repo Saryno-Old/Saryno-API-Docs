@@ -6,4 +6,5 @@
 ## Resources
 
 * [Users](resources/users.md)
+* [Channels](resources/channels.md)
 

@@ -59,7 +59,7 @@ description: Users Resource
   </tbody>
 </table>
 
-{% api-method method="get" host="https://api.saryno.com/v1" path="/users/@me" %}
+{% api-method method="get" host="" path="/users/@me" %}
 {% api-method-summary %}
 Get Current User
 {% endapi-method-summary %}
@@ -94,7 +94,7 @@ Returns the current user object of the requester's account.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://api.saryno.com/v1" path="/users/{user.id}" %}
+{% api-method method="get" host="" path="/users/{user.id}" %}
 {% api-method-summary %}
 Get User
 {% endapi-method-summary %}
@@ -135,7 +135,7 @@ the user's id
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="patch" host="https://api.saryno.com/v1" path="/users/@me" %}
+{% api-method method="patch" host="" path="/users/@me" %}
 {% api-method-summary %}
 Modify Current User
 {% endapi-method-summary %}
@@ -180,7 +180,7 @@ the new username of the user
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://api.saryno.com/v1" path="/users/@me/communities" %}
+{% api-method method="get" host="" path="/users/@me/communities" %}
 {% api-method-summary %}
 Get Current User Communities
 {% endapi-method-summary %}
@@ -228,6 +228,104 @@ Leave Community
 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="" path="/users/@me/channels" %}
+{% api-method-summary %}
+Get User DMs
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Returns a list of DM Channel Objects
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+Todo
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="" path="/users/@me/channels" %}
+{% api-method-summary %}
+Create a DM Channel
+{% endapi-method-summary %}
+
+{% api-method-description %}
+If the channel was created before, it will simply return that channel
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="recipient\_id" type="string" required=true %}
+the recipient's user.id
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="number" required=true %}
+2 \(DM Channel\)
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="" path="/users/@me/channels" %}
+{% api-method-summary %}
+Create a Group DM Channel
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="recipient\_ids" type="array" required=true %}
+array of user.ids 
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="number" required=true %}
+3 \(Group DM Channel\)
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
